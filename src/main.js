@@ -1,8 +1,12 @@
 import './app.css'
-import App from './App.svelte'
+import Tutorial from './Tutorial.svelte'
 
-const app = new App({
-  target: document.getElementById('app')
+const app = new Tutorial({
+  target: document.getElementById('app'),
+  props: {
+    language: 'Javascript'
+  }
 })
+
 
 export default app
