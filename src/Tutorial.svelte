@@ -5,6 +5,11 @@
     let name = 'Svelte';
     let alt = name + ' cool logo.';
     let htmlString = '<strong>bolded text</strong>';
+
+    let count = 0;
+    const incrementCount = () => {
+        count += 1;
+    };
 </script>
 
 <!-- Adding simple data -->
@@ -29,3 +34,8 @@
 
 <!-- Html tags as data-->
 <p>Hello this is a {@html htmlString}</p>
+
+<!-- Reactivity and Assignments -->
+<button on:click={incrementCount}>
+    You have clicked me {count} {count === 1 ? 'time' : 'times'} !
+</button>
