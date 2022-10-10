@@ -1,5 +1,6 @@
 <script>
     import svelteLogo from './assets/svelte.svg';
+
     let name = 'Svelte';
     let alt = name + ' cool logo.';
 </script>
@@ -9,3 +10,14 @@
 
 <!-- Dynamic attributes -->
 <img src={svelteLogo} {alt}>
+
+<!-- Styling-->
+<style>
+    h1 {
+        color: blue;
+        font-size: 1.5rem;
+    }
+    button {
+        background: rgb(198, 198, 224);
+    }
+</style>
