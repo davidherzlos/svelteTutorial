@@ -1,5 +1,6 @@
 <script>
     import svelteLogo from './assets/svelte.svg';
+    import NestedComponent from './NestedComponent.svelte';
 
     let name = 'Svelte';
     let alt = name + ' cool logo.';
@@ -21,3 +22,6 @@
         background: rgb(198, 198, 224);
     }
 </style>
+
+<!-- Nested components -->
+<NestedComponent/>
