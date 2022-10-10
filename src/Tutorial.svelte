@@ -4,6 +4,7 @@
 
     let name = 'Svelte';
     let alt = name + ' cool logo.';
+    let htmlString = '<strong>bolded text</strong>';
 </script>
 
 <!-- Adding simple data -->
@@ -25,3 +26,6 @@
 
 <!-- Nested components -->
 <NestedComponent/>
+
+<!-- Html tags as data-->
+<p>Hello this is a {@html htmlString}</p>
