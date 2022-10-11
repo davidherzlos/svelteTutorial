@@ -13,6 +13,15 @@
     const incrementCount = () => {
         count += 1;
     };
+
+    // Reactivity / Statements
+    $: {
+        console.log('count is' + count);
+    }
+    $: if (count >= 10) {
+        alert('You can increase count until ' + count);
+        count = 0;
+    }
 </script>
 
 <!-- Adding simple data -->
