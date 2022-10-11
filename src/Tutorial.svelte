@@ -7,6 +7,9 @@
     let htmlString = '<strong>bolded text</strong>';
 
     let count = 0;
+
+    $: doubled = count * 2;
+
     const incrementCount = () => {
         count += 1;
     };
@@ -35,7 +38,12 @@
 <!-- Html tags as data-->
 <p>Hello this is a {@html htmlString}</p>
 
-<!-- Reactivity and Assignments -->
+<!-- Reactivity / Assignments -->
 <button on:click={incrementCount}>
     You have clicked me {count} {count === 1 ? 'time' : 'times'} !
 </button>
+
+<!-- Reactivity / Declarations  -->
+<p>
+    Count {count} is doubled {doubled} by a reactive declaration
+</p>
