@@ -1,6 +1,10 @@
 <script>
+    import App from './App.svelte';
     import svelteLogo from './assets/svelte.svg';
+    import Counter from './lib/Counter.svelte';
     import NestedComponent from './NestedComponent.svelte';
+    import AnotherComponent from './AnotherComponent.svelte';
+
 
     let name = 'Svelte';
     let alt = name + ' cool logo.';
@@ -29,6 +33,13 @@
     const addToList = () => {
         list = [...list, list.length + 1];
     };
+
+
+    // Spread properties!!
+    let properties = {
+        name: 'David',
+        age: 37
+    }
 </script>
 
 <!-- Adding simple data -->
@@ -77,5 +88,9 @@
 </p>
 
 
-<!-- Nested components -->
+<!-- Components props -->
 <NestedComponent prop={"I'm finnaly one property value!"}/>
+
+
+<!-- Components props -->
+<AnotherComponent {...properties}/>
