@@ -24,7 +24,6 @@
     }
 
     // Reactivity / Objects and arrays
-
     let list = [1,2,3,4,5];
     $: result = list.reduce((t, n) => t * n, 1);
     const addToList = () => {
@@ -33,7 +32,7 @@
 </script>
 
 <!-- Adding simple data -->
-<h1>Hello {name}, i need the 'language' prop to be here</h1>
+<h1>Hello {name}, i finnaly understood how props are</h1>
 
 <!-- Dynamic attributes -->
 <img src={svelteLogo} {alt}>
@@ -75,6 +74,8 @@
     </button>
     <br>
     Endless multiplication {list.join(' * ')} results in {result}
-
-
 </p>
+
+
+<!-- Nested components -->
+<NestedComponent prop={"I'm finnaly one property value!"}/>
